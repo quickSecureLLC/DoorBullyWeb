@@ -3,209 +3,314 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-    <meta name="description" content="DoorBully: A cutting-edge security solution enhancing school safety through advanced locking mechanisms and intelligent sound source localization."/>
-    <title>DoorBully – Advanced Classroom Security</title>
+    <meta name="description" content="QuickSecure: Advanced Classroom Security"/>
+    <title>QuickSecure – Advanced Classroom Security</title>
+    <!-- Importing a modern font like Raleway -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" />
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/script.js" defer></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 </head>
 <body>
     <header class="main-header">
         <div class="nav-container">
-            <a href="#" class="logo">DoorBully</a>
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="QuickSecure Logo" class="logo-img">
+                <span class="logo-text">QuickSecure</span>
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#overview">System Overview</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#sound">Sound Localization</a></li>
-                    <li><a href="#installation">Installation</a></li>
-                    <li><a href="#testing">Testing & Results</a></li>
-                    <li><a href="#future">Future Plans</a></li>
-                    <li><a href="#market">Market Insights</a></li>
-                    <li><a href="#field">Field Implementation</a></li>
-                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#data-driven">Data-Driven Security</a></li>
+                    <li><a href="#needed">Why QuickSecure?</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#faq">FAQ & Guidance</a></li>
+                    <li><a href="#contact">Contact & Support</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>DoorBully</h1>
-            <p>The Future of Classroom Security</p>
+        <div class="hero-overlay"></div>
+        <!-- Hero background image -->
+        <img src="images/hero.jpg" alt="Secure door environment" class="hero-img">
+
+        <div class="hero-content hero-left">
+            <h1 class="hero-title">QuickSecure</h1>
+            <p class="hero-subtitle">Securing <strong>Tomorrow's</strong> Future <strong>Today</strong></p>
             <a href="#overview" class="hero-cta">Learn More</a>
         </div>
-        <div class="hero-overlay"></div>
-        <img src="images/hero.jpg" alt="Secure door environment" class="hero-img">
     </section>
 
     <section id="overview" class="section overview">
         <div class="section-content">
             <h2>Comprehensive Overview</h2>
             <p>
-                DoorBully is a state-of-the-art security solution engineered to protect classrooms and schools during emergency situations. 
-                Leveraging advanced locking mechanisms, robust materials, and intelligent sound source localization, DoorBully creates safe havens, ensuring swift and effective lockdowns when every second counts.
+                QuickSecure is a rapid-response security and lockdown system designed specifically for schools. In moments of crisis—such as an active shooter or other high-threat events—QuickSecure acts decisively, locking down selected classrooms and areas to safeguard students and staff. Unlike traditional locks that may take valuable time to engage, QuickSecure can secure multiple doors instantly, triggered either manually or electronically.
             </p>
             <p>
-                With both manual and electronically assisted models, DoorBully seamlessly integrates into existing emergency protocols while enhancing response time and providing unparalleled peace of mind for administrators, teachers, and students.
+                Through a combination of integrated sensors, digital floor plans, and scheduling data, QuickSecure intelligently determines which rooms should remain locked or accessible, ensuring that anyone caught in hallways can quickly find safe shelter. This data-driven approach also provides real-time information to first responders and administrators via a secure on-site web server. They immediately gain insights into the building’s layout, current lockdown status, and potential threat locations. This empowers first responders to coordinate their actions more effectively, ultimately reducing response times and saving lives.
             </p>
         </div>
+    
+        <div class="section-image right">
+            <div class="video-container">
+                <!-- Example animation/video moved up here -->
+                <!-- Replace VIDEO_ID with your YouTube video ID -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eoKj-yLPhRI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </section>
+    
 
     <section id="products" class="section products">
         <div class="products-grid">
             <div class="product-item">
-                <img src="images/product-electronic.jpg" alt="Electronically Assisted DoorBully" />
-                <h3>Electronically Assisted DoorBully</h3>
+                <!-- Add .zoomable-image class to enable zoom functionality -->
+                <img src="images/product-electronic.jpg" alt="Electronically Assisted QuickSecure" class="zoomable-image" data-fullsize="images/product-electronic.jpg">
+                <h3>Electronically Assisted QuickSecure</h3>
                 <p>
-                    The Electronically Assisted DoorBully integrates cutting-edge technology for remote and centralized control:
+                    The Electronically Assisted QuickSecure integrates cutting-edge technology for remote and centralized control:
                 </p>
                 <ul>
-                    <li><strong>DC Motor:</strong> Powers the slide lock mechanism remotely for instant lockdown.</li>
-                    <li><strong>Electronic Control System:</strong> Connects to the building’s central unit, enabling real-time status monitoring and machine learning-driven safety analytics.</li>
+                    <li><strong>DC Motor:</strong> Instantly locks doors at the press of a button.</li>
+                    <li><strong>Electronic Control System:</strong> Connects to the building’s central unit, providing real-time status monitoring and ML-driven analytics.</li>
                 </ul>
                 <p>
-                    This model ensures immediate responses to threats, offering a powerful tool for administrators to secure multiple rooms simultaneously.
+                    This model ensures immediate responses to threats, allowing administrators to secure multiple rooms simultaneously.
                 </p>
             </div>
 
             <div class="product-item">
-                <img src="images/product-manual.jpg" alt="Manual DoorBully" />
-                <h3>Manual DoorBully</h3>
+                <img src="images/product-manual.jpg" alt="Manual QuickSecure" class="zoomable-image" data-fullsize="images/product-manual.jpg">
+                <h3>Manual QuickSecure</h3>
                 <p>
-                    The Manual DoorBully provides a mechanically operated, reliable solution:
+                    The Manual QuickSecure offers a straightforward, mechanically operated solution:
                 </p>
                 <ul>
-                    <li><strong>Rail System:</strong> Adapts to all standard door frames, ensuring proper positioning.</li>
-                    <li><strong>Slide Lock:</strong> Manually secure the door with a simple, robust mechanism.</li>
-                    <li><strong>Status Indicators:</strong> Visual cues offer immediate confirmation of lock status.</li>
-                    <li><strong>High-Strength Materials:</strong> Carbon fiber and PLA provide strength, durability, and lightweight handling.</li>
+                    <li><strong>Rail System:</strong> Adapts to all standard door frames for optimal positioning.</li>
+                    <li><strong>Slide Lock:</strong> A simple, robust manual locking mechanism.</li>
+                    <li><strong>Status Indicators:</strong> Visual cues for immediate confirmation of lock status.</li>
+                    <li><strong>High-Strength Materials:</strong> Carbon fiber and PLA ensure durability and lightweight handling.</li>
                 </ul>
                 <p>
-                    It’s a straightforward, cost-effective option for institutions looking to enhance security without electronic infrastructure.
+                    A cost-effective option for enhancing security without electronic infrastructure.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="sound" class="section sound">
+    <section id="data-driven" class="section sound">
         <div class="section-content">
-            <h2>Sound Source Localization</h2>
-            <img src="images/sound-localization.jpg" alt="Sound localization visualization" class="section-image right">
+            <h2>Data-Driven Decision Making</h2>
             <p>
-                DoorBully features advanced sound source localization, leveraging strategically placed microphones and AI-driven algorithms:
+                QuickSecure leverages advanced data-driven decision-making to deliver a robust solution that arms first responders and administrators with precise, real-time information.
             </p>
             <ul>
-                <li><strong>Precision Placement:</strong> Microphones placed according to digital floor plans for accurate triangulation.</li>
-                <li><strong>Acoustic Analysis:</strong> Detects specific decibel thresholds and frequencies (e.g., gunshots), minimizing false positives.</li>
-                <li><strong>Real-Time Data Integration:</strong> Triangulates sound origin to pinpoint threats instantly.</li>
-                <li><strong>AI Model Training:</strong> Simulations refine detection capabilities, using Rainforest Regression for complex audio pattern analysis.</li>
+                <li><strong>Floor Plan & Schedule Integration:</strong> QuickSecure analyzes digital floor plans, classroom schedules, and bell timetables. Rooms with no scheduled occupants remain unlocked initially, allowing students or educators in hallways to quickly find refuge.</li>
+                <li><strong>Sound Source Localization:</strong> By detecting and triangulating sounds such as gunshots, QuickSecure uses time differences of sound arrival to accurately map the location of an active threat.</li>
+                <li><strong>Automated Lockdown Strategy:</strong> The system processes environmental data to determine which rooms to lock or leave accessible, optimizing safety and ensuring that the right areas are secured at the right time.</li>
+                <li><strong>Web Server Integration:</strong> All this data is presented on an on-site hosted web server, providing administrators and first responders with an up-to-the-minute visual map. This allows for a swift and informed response, guiding them to the source of the threat and indicating safe zones.</li>
             </ul>
+            <p>
+                By synthesizing environmental cues, schedules, and acoustic intelligence, QuickSecure enables responders and officials to make rapid, evidence-based decisions under pressure, ultimately enhancing safety and security.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="images/sound-localization.jpg" alt="Data-driven analysis visualization" class="zoomable-image" data-fullsize="images/sound-localization.jpg">
         </div>
     </section>
 
-    <section id="installation" class="section installation">
+
+    <section id="needed" class="section needed">
         <div class="section-content">
-            <h2>Installation Process</h2>
-            <img src="images/installation.jpg" alt="Installation process" class="section-image left">
+            <h2>Why This Is Needed</h2>
             <p>
-                DoorBully’s installation is designed for simplicity and speed, ensuring minimal disruption:
+                In recent years, active shooter incidents in schools have continued to increase. According to various studies and reports (e.g., the FBI’s active shooter reports), these tragic events have nearly doubled over the last two decades. This reality demands proactive measures that can swiftly secure classrooms, minimize exposure to danger, and ultimately save lives.
+            </p>
+            <p>
+                Beyond the immediate physical threat, prolonged exposure to such high-stress situations can cause lasting emotional trauma for students and educators. Research shows that even short incidents can lead to anxiety, stress disorders, and long-term mental health challenges. By drastically reducing the time occupants remain in harm’s way, QuickSecure not only helps ensure their physical safety but also decreases the psychological toll. The faster a threat is contained, the sooner educators can tend to their students’ emotional needs, help them regain a sense of security, and begin the healing process.
+            </p>
+            <p>
+                QuickSecure takes human hesitation and complex decision-making out of the equation. In a matter of moments, it intelligently locks down the necessary areas, allowing teachers and staff to focus on guiding students and coordinating safe egress. With gun-related threats showing no signs of disappearing, preparation and rapid response are paramount. QuickSecure’s data-driven approach ensures that schools are equipped to face these challenges head-on, fostering an environment where learning, recovery, and resilience are possible, even in the face of emerging threats.
             </p>
             <ul>
-                <li><strong>Custom Mounting Solutions:</strong> Brackets align seamlessly with door frames.</li>
-                <li><strong>Server and Network Setup:</strong> A secure, UPS-backed server manages and monitors all DoorBully units, connected through reliable mesh networks.</li>
-                <li><strong>User-Friendly Interface:</strong> A GUI enables quick configuration of classroom setups, device parameters, and security protocols.</li>
+                <li>Enhancing on-site security preparedness through instantaneous lockdown.</li>
+                <li>Reducing response times to limit both physical exposure and emotional harm.</li>
+                <li>Empowering educators and staff to concentrate on student well-being rather than struggling with mechanical locks.</li>
+                <li>Providing a proactive, intelligent strategy that safeguards lives and aids quicker post-incident recovery.</li>
             </ul>
         </div>
-    </section>
-
-    <section id="testing" class="section testing">
-        <div class="section-content">
-            <h2>Testing & Results</h2>
-            <img src="images/testing.jpg" alt="Testing and durability checks" class="section-image right">
-            <p>
-                Rigorous endurance testing ensures long-term reliability:
-            </p>
-            <ul>
-                <li><strong>Cycle Tests:</strong> Simulated 22,500 operations to assess mechanical and electronic durability.</li>
-                <li><strong>Material Performance:</strong> Evaluated Carbon Fiber Nylon Composites, PLA, and Billet Aluminum 6061. Aluminum displayed minimal wear and superior longevity.</li>
-            </ul>
+        <div class="section-image">
+            <img src="images/stat.jpg" alt="Statistics" class="zoomable-image section-image right" data-fullsize="images/stat.jpg">
         </div>
     </section>
+    
 
-    <section id="future" class="section future">
+    <section id="about" class="section about">
         <div class="section-content">
-            <h2>Future Production Plans</h2>
+            <h2>About Us</h2>
             <p>
-                DoorBully’s roadmap includes scaling production and enhancing material and component quality:
+                QuickSecure began as an idea born out of necessity. Founded by <strong>Rohan Kumar</strong> and <strong>William Suskin</strong> in 11th grade, the company was created in response to a staggering and heartbreaking reality: the number of active gun threats in schools surpassed the days elapsed in the year. This alarming statistic drove us to take action, to innovate, and to seek a solution that could truly make a difference.
             </p>
-            <ul>
-                <li><strong>Gravity Die Casting:</strong> For durable, corrosion-resistant metal parts at high volume.</li>
-                <li><strong>Injection Molding:</strong> Ensures precise, high-quality components using gas-assisted techniques.</li>
-                <li><strong>Modular PCBs:</strong> Simplifies component replacement and future upgrades.</li>
-                <li><strong>ADA-Compliant Design:</strong> Handles and interfaces designed for accessibility and compliance with Americans with Disabilities Act standards.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="market" class="section market">
-        <div class="section-content">
-            <h2>Market Insights</h2>
-            <img src="images/market.jpg" alt="Market growth graph" class="section-image left">
             <p>
-                DoorBully addresses a critical and growing need in a volatile security landscape:
+                When we looked at the existing market, we were disheartened. Many solutions lacked fire safety compliance, making them unsuitable for U.S. public schools. Others placed students in greater danger or simply attempted to mitigate the problem without effectively addressing it. We knew we had to create something better—something that not only complied with safety regulations but actively protected students and educators in life-threatening situations.
             </p>
-            <ul>
-                <li><strong>Increasing Need:</strong> School shootings have risen dramatically, underscoring the urgency for robust solutions.</li>
-                <li><strong>Fire Code Compliance:</strong> DoorBully meets safety regulations, unlike many supplementary locks.</li>
-                <li><strong>Global Security Market:</strong> Projected to reach $483.62 billion by 2026, signaling strong demand for advanced solutions.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="field" class="section field">
-        <div class="section-content">
-            <h2>Field Implementation</h2>
-            <img src="images/field.jpg" alt="School building" class="section-image right">
             <p>
-                DoorBully is moving from concept to community:
+                With determination and guidance from our engineering teachers, we developed the idea for Quick Secure. Encouraged by our educators, we entered our concept into several competitions, and the response was overwhelming. We were honored to win the <strong>K-12 InVenture Prize</strong> at Georgia Institute of Technology, which propelled us to the <strong>National Invention Convention</strong>. There, we were awarded the prestigious <strong>WilmerHale Patent Award</strong>, which allowed us to secure a patent for our product and bring it closer to market.
             </p>
-            <ul>
-                <li><strong>Pilot Programs:</strong> 10 units installed in local schools to gather real-world feedback.</li>
-                <li><strong>District Collaboration:</strong> Partnerships with 11 school districts for planned system rollouts.</li>
-                <li><strong>Large-Scale Deployments:</strong> 45 units approved for installation, pending final testing and evaluation.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="conclusion" class="section conclusion">
-        <div class="section-content">
-            <h2>Conclusion</h2>
             <p>
-                DoorBully revolutionizes classroom security with its robust mechanical and electronic solutions, advanced sound localization capabilities, and streamlined installation and management processes. By evolving continuously through feedback and testing, DoorBully stands ready to set new standards in educational safety, ensuring that students and staff are protected in the moments that matter most.
+                Along the way, we’ve partnered with organizations such as <strong>Ryerson Steel</strong> and <strong>Siemens Electrical</strong>, as well as other companies that believed in our mission. These collaborations have enabled us to refine and advance Quick Secure into the reliable, innovative system it is today.
+            </p>
+            <p>
+                As students ourselves, our mission remains deeply personal: to protect our peers, educators, and communities from the tragic violence that has become all too common. We are committed to making QuickSecure accessible to those who need it most, providing a solution that prioritizes safety, compliance, and peace of mind.
             </p>
         </div>
+        <div class="section-image">
+            <img src="images/about-us.jpg" alt="Rohan Kumar and William Suskin, Quick Secure Founders">
+            <p>
+                 
+            </p>
+            <img src="images/about-us2.jpg" alt="Rohan Kumar and William Suskin, Quick Secure Founders">
+        </div>
     </section>
+    
+
+    <section id="faq" class="faq-section">
+        <div class="faq-header">
+            <h3 class="faq-category-left">General</h3>
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <h3 class="faq-category-right">Set Up & Use</h3>
+        </div>
+    
+        <div class="faq-items">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How does it work?
+                </button>
+                <div class="faq-answer">
+                    <p>The doorBully operates with simplicity and efficiency, enhancing your security. While the embedded video provides a visual demonstration of the manual system, here's an overview of how both the manual and electronic systems function:</p>
+                    <ul>
+                        <li><strong>Manual System:</strong> In the video, you'll see how the manual Quick Locking Slider is effortlessly pulled down to secure the door. It's a quick, intuitive motion that instantly blocks the shackle, bolstering your safety.</li>
+                        <li><strong>Electronic System:</strong> The electronic system takes security a step further. Through the integrated app, you can remotely activate the motorized lock with a simple tap. Whether you're inside your home or away, the app empowers you to secure your doors at will.</li>
+                    </ul>
+                    <p>While the video showcases the manual system, the electronic version offers the convenience of automated security. Feel free to watch the video for the manual demonstration, and rest assured that the electronic system seamlessly provides a similar level of protection through cutting-edge technology. Your safety is at the heart of our innovation.</p>
+                </div>
+            </div>
+    
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How is this different from locking a door normally?
+                </button>
+                <div class="faq-answer">
+                    <p>The doorBully offers a substantial departure from conventional door locks. Here's how it stands out:</p>
+                    <ul>
+                        <li><strong>Effortless Operation:</strong> In high-stress situations, like emergencies or security threats, the doorBully's intuitive design shines. Unlike traditional locks that might require fumbling or careful selection, the manual version involves a single seamless motion – a quick pull down to secure the door, allowing for swift and efficient lockdown.</li>
+                        <li><strong>Enhanced Safety:</strong> The doorBully caters to scenarios where motor skills might be impaired due to stress. Teachers and occupants can instantly activate the lock without fine motor control. The electronic version takes it a step further by offering automatic locking with a simple tap on the app or a panic button, ensuring rapid response in critical moments.</li>
+                        <li><strong>Unmatched Convenience:</strong> Traditional locks can be cumbersome and slow, potentially compromising safety. The doorBully's streamlined process optimizes response time, enhancing overall security.</li>
+                    </ul>
+                    <p>In summary, the doorBully's effortless operation, enhanced safety features, and unmatched convenience differentiate it from regular locks. It's designed to empower users with an effective, rapid, and reliable solution for securing spaces, particularly in high-stress situations where every second counts.</p>
+                </div>
+            </div>
+    
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How much does it cost?
+                </button>
+                <div class="faq-answer">
+                    <p>The cost of the doorBully is tailored to your specific requirements, ensuring you receive optimal value for your investment. Our pricing operates on a sliding scale, determined by factors such as your unique needs and the quantity of orders.</p>
+                    <ul>
+                        <li><strong>Professional Assessment:</strong> A certified technician will conduct an on-site assessment, accurately measuring the number of doors to be equipped with the doorBully. This step ensures precise pricing based on your building's layout.</li>
+                        <li><strong>Version Selection:</strong> You can choose the doorBully version that best suits your needs – be it the manual system or the advanced electronic suite.</li>
+                        <li><strong>Customized Quote:</strong> Once measurements are taken and your version choice is confirmed, a personalized price quote will be provided. This quote reflects the quantity, version, and any additional considerations.</li>
+                    </ul>
+                    <p>Rest assured, our pricing structure is designed to be fair and transparent. We believe in providing you with a tailored solution that aligns perfectly with your requirements. Your satisfaction is our priority, and we're committed to delivering the best value for your investment.</p>
+                </div>
+            </div>
+    
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I install the doorBully?
+                </button>
+                <div class="faq-answer">
+                    <p>Installing the doorBully is a seamless process. Here's what you can expect:</p>
+                    <ul>
+                        <li><strong>Professional Assessment:</strong> A certified Quick Secure technician will visit your location to assess and measure all doors where the installation is intended. This ensures a precise fit and optimal security.</li>
+                        <li><strong>Material Approval:</strong> Based on the assessment, the technician will recommend the appropriate materials for your doors. Once approved by you, the installation process begins.</li>
+                        <li><strong>Precise Installation:</strong> Small drill holes will be carefully placed in strategic positions on the door. The doorBully will then be securely screwed into these holes, creating a strong and reliable attachment.</li>
+                        <li><strong>Reversible Modification:</strong> If you wish to remove the doorBully in the future, the drilled holes can be easily filled and restored, leaving your door intact.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I use the device after installation?
+                </button>
+                <div class="faq-answer">
+                    <p>Using the doorBully post-installation is straightforward. Here's how it works:</p>
+                    <ul>
+                        <li><strong>Professional Installation:</strong> A certified technician will expertly install the doorBully on your doors, ensuring it's properly secured and functioning.</li>
+                        <li><strong>Training Session:</strong> For those who request it, the technician will provide a training session. This session is particularly beneficial for administrators and law enforcement personnel. During the training, you'll learn how to effectively engage and disengage the device, utilize its features, and understand its indicators.</li>
+                        <li><strong>Expert Guidance:</strong> The training ensures that you are well-versed in using the doorBully to its full potential. You'll gain confidence in activating the device swiftly when needed and deactivating it as required.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How is the electronic system connected?
+                </button>
+                <div class="faq-answer">
+                    <p>The connection of the electronic system is a collaborative and meticulous process. Here's how it comes together:</p>
+                    <ul>
+                        <li><strong>Pre-Installation Check:</strong> Before purchase, all Wi-Fi and system requirements will be thoroughly reviewed. This ensures compatibility and a smooth integration of the electronic system.</li>
+                        <li><strong>Coordinated Installation:</strong> Once the doorBully is ready to be installed, our certified technician will work in tandem with your building's IT staff. Together, they will ensure the electronic system is seamlessly integrated into your existing infrastructure.</li>
+                        <li><strong>Technical Expertise:</strong> Our technician brings expertise in aligning the electronic system with your network. They'll configure settings, establish secure connections, and troubleshoot any potential hiccups.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>          
 
     <footer class="main-footer">
         <div class="footer-content">
-            <p>© <?php echo date('Y'); ?> DoorBully. All Rights Reserved.</p>
+            <div class="footer-contact" id="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:quicksecurellc@gmail.com">quicksecurellc@gmail.com</a></p>
+                <p>Phone: <a href="tel:4043982778">404-398-2778</a></p>
+            </div>
+            
+            <p>© 2024 QuickSecure LLC. All Rights Reserved. Patent Pending.</p>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#overview">System Overview</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#sound">Sound Localization</a></li>
-                    <li><a href="#installation">Installation</a></li>
-                    <li><a href="#testing">Testing</a></li>
-                    <li><a href="#future">Future Plans</a></li>
-                    <li><a href="#market">Market Insights</a></li>
-                    <li><a href="#field">Implementation</a></li>
-                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#data-driven">Data-Driven Security</a></li>
+                    <li><a href="#needed">Why QuickSecure?</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#faq">FAQ & Guidance</a></li>
+                    <li><a href="#footer-contact">Contact & Support</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
+
+    <!-- Image Modal for Zooming -->
+    <div id="image-modal" class="image-modal hidden">
+        <div class="image-modal-content">
+            <span class="image-modal-close">&times;</span>
+            <img id="image-modal-img" src="" alt="Expanded view">
+        </div>
+    </div>
+
 </body>
 </html>
