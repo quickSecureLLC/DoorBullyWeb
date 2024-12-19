@@ -59,10 +59,11 @@ body {
 }
 
 .logo-text {
-    font-size: 1.8rem; /* Larger, modern text size */
-    font-weight: 700; /* Bold text for visibility */
-    color: #76323F; /* Brand color */
-    letter-spacing: 1px; /* Add spacing between letters */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem; /* Adjust size to match the new font */
+    font-weight: 700;
+    letter-spacing: 1px; /* Slightly spaced letters */
+    color: #76323F;
 }
 
 /* Navigation Menu Styling */
@@ -935,3 +936,374 @@ img.loaded {
     max-height: 100%;
     display: block;
 }
+/* GLOBAL STYLES */
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Color Palette */
+:root {
+    --oxblood: #76323F;
+    --tan: #C09F80;
+    --grey: #565656;
+    --light-grey: #f9f9f9;
+    --white: #fff;
+    --black: #000;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* RESET */
+ul, ol, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN HEADER */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: var(--white);
+    border-bottom: 1px solid var(--shadow);
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--oxblood);
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION MENU */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+    font-weight: 500; /* Medium weight for better readability */
+    font-size: 1rem;
+    color: var(--black);
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.main-nav a:hover {
+    color: var(--oxblood);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--black);
+    border-radius: 2px;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right on larger screens */
+    padding: 0 10%; /* Add spacing from edges */
+}
+
+.hero .hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    filter: brightness(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5); /* Optional tint overlay */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    text-align: right; /* Align text to the right on larger screens */
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Default color */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #f0f0f0; /* Default color */
+}
+
+.hero-cta {
+    background: #C09F80;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.hero-cta:hover {
+    background: #76323F;
+}
+
+/* Style changes for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center; /* Center everything on smaller screens */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        color: #C09F80; /* Change text color to match "Learn More" button */
+    }
+
+    .hero-cta {
+        background: #fff; /* White background for the button */
+        color: #000; /* Black text for the button */
+    }
+}
+
+
+
+/* SECTION STYLES */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-content {
+    flex: 1 1 60%;
+}
+
+.section-image {
+    flex: 1 1 35%;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    color: var(--oxblood);
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    font-size: 1rem;
+}
+
+.section-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.product-item {
+    flex: 1 1 calc(50% - 20px);
+    background: var(--light-grey);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--oxblood);
+}
+
+/* FAQ */
+.faq-section {
+    padding: 50px 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--shadow);
+    padding: 10px 0;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* FOOTER */
+.main-footer {
+    background: var(--black);
+    color: var(--light-grey);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 10px 0;
+    }
+
+    .main-nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+    }
+}
+
