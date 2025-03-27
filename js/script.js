@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = modal.querySelector('.modal-close');
     const submitButton = modal.querySelector('.modal-submit');
 
-    // Close modal when clicking the close button
+    // Close the modal when clicking the close button
     closeButton.addEventListener('click', () => {
         hideModal();
     });
@@ -174,28 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailInput = modal.querySelector('input');
         const emailValue = emailInput.value.trim();
 
-        // Validate the email (must contain an "@")
+        // Validate that the email contains an "@"
         if (!emailValue.includes('@')) {
             alert('Please enter a valid email address.');
             return;
         }
 
-        // Send the email to your Google Apps Script endpoint
-        fetch('https://script.google.com/macros/s/AKfycbylN6Fy28K-xhO7YWPw4ILuPmi-OO7FZa4ap7GWdElj9aaZhb8Wd8N2F5-1rNQqxu7XcQ/exec', {
+        // Send the email to your Google Apps Script endpoint using no-cors mode
+        fetch('https://script.google.com/macros/s/AKfycbx0oYMCuEc7qsKR9hbtieViobpy8M0frWz4z_KBkZFOJY-EnIa72aer7gfpVMfHBzOScg/exec', {
             method: 'POST',
+            mode: 'no-cors',  // Opaque response mode to bypass CORS preflight
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ email: emailValue })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                console.log('Email submitted:', emailValue);
-                hideModal();
-            } else {
-                alert('Error: ' + data.message);
-            }
+        .then(() => {
+            // In no-cors mode, the response is opaque so we assume success
+            console.log('Email submitted (opaque response):', emailValue);
+            hideModal();
         })
         .catch(error => {
             console.error('Error submitting email:', error);
@@ -231,8 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     }
 }
-
-
 
     function createImageZoom() {
         const zoomableImages = document.querySelectorAll('.zoomable-image');
