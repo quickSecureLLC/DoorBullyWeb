@@ -1305,5 +1305,17 @@ ul, ol, p {
     .footer-nav ul {
         flex-direction: column;
     }
+        /* Dark mode overrides for products grid */
+    .dark-mode .products-grid .product-item {
+      background: #333;     /* Dark gray background */
+      color: #fff;          /* White text for contrast */
+    }
+    
+    .dark-mode .products-grid .product-item h3,
+    .dark-mode .products-grid .product-item p,
+    .dark-mode .products-grid .product-item li {
+      color: #fff;          /* Ensure headings, paragraphs, and list items are white */
+}
+
 }
 
