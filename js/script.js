@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footer = document.querySelector('.main-footer');
 
     // Existing functionality calls...
-    createDarkModeToggle();
+    //createDarkModeToggle();
     createMobileNavToggle();
     createModalPopup();
 
