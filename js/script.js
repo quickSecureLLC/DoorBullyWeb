@@ -143,56 +143,95 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createModalPopup() {
-        const modal = document.createElement('div');
-        modal.classList.add('modal-backdrop', 'hidden');
+    let modalShown = false; // Ensures the modal only shows once
+    let scrolled = false;   // Tracks if user has scrolled past 800px
 
-        modal.innerHTML = `
-            <div class="modal">
-                <h2>Stay Informed</h2>
-                <p>Sign up for our newsletter to receive the latest security insights and updates on QuickSecure.</p>
-                <input type="email" placeholder="Your Email" aria-label="Email Address" />
-                <button class="modal-submit">Sign Up</button>
-                <button class="modal-close">&times;</button>
-            </div>
-        `;
+    // 1) Create the modal backdrop + content
+    const modal = document.createElement('div');
+    modal.classList.add('modal-backdrop', 'hidden');
+    modal.innerHTML = `
+        <div class="modal">
+            <h2>Stay Informed</h2>
+            <p>Sign up for our newsletter to receive the latest security insights and updates on QuickSecure.</p>
+            <input type="email" placeholder="Your Email" aria-label="Email Address" />
+            <button class="modal-submit">Sign Up</button>
+            <button class="modal-close">&times;</button>
+        </div>
+    `;
+    document.body.appendChild(modal);
 
-        document.body.appendChild(modal);
+    // 2) Grab references to the close and submit buttons
+    const closeButton = modal.querySelector('.modal-close');
+    const submitButton = modal.querySelector('.modal-submit');
 
-        const closeButton = modal.querySelector('.modal-close');
-        const submitButton = modal.querySelector('.modal-submit');
+    // 3) Close button logic
+    closeButton.addEventListener('click', () => {
+        hideModal();
+    });
 
-        closeButton.addEventListener('click', () => {
-            hideModal(modal);
-        });
+    // 4) Submit button logic (validates email and sends it to Google Apps Script)
+    submitButton.addEventListener('click', () => {
+        const emailInput = modal.querySelector('input');
+        const emailValue = emailInput.value.trim();
 
-        submitButton.addEventListener('click', () => {
-            console.log('Email submitted:', modal.querySelector('input').value);
-            hideModal(modal);
-        });
+        // Check that the email contains an "@"
+        if (!emailValue.includes('@')) {
+            alert('Please enter a valid email address.');
+            return;
+        }
 
-        setTimeout(() => {
-            console.log('30 seconds passed, showing modal...');
-            showModal(modal);
-        }, 30000);
-
-        let scrolled = false;
-        window.addEventListener('scroll', () => {
-            if (!scrolled && window.scrollY > 800) {
-                scrolled = true;
-                showModal(modal);
+        // Send the email to your Google Apps Script endpoint
+        fetch('https://script.google.com/macros/s/AKfycbw1s7y04Pc2gjCiJX6R0BorsHxr2JmzBALcJY-vkj2HKnT8MzgZv5tsArcGNVwLO0v7oQ/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: emailValue })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                console.log('Email submitted:', emailValue);
+                hideModal();
+            } else {
+                alert('Error: ' + data.message);
             }
-        }, { passive: true });
+        })
+        .catch(error => {
+            console.error('Error submitting email:', error);
+            alert('There was an error. Please try again later.');
+        });
+    });
 
-        function showModal(modal) {
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
+    // 5) Show the modal after 30 seconds (only once)
+    setTimeout(() => {
+        console.log('30 seconds passed, showing modal...');
+        showModal();
+    }, 30000);
 
-        function hideModal(modal) {
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
+    // 6) Also show the modal if user scrolls past 800px (only once)
+    window.addEventListener('scroll', () => {
+        if (!scrolled && window.scrollY > 800) {
+            scrolled = true;
+            showModal();
         }
+    }, { passive: true });
+
+    // 7) Helper to show the modal
+    function showModal() {
+        if (modalShown) return; // If we've already shown the modal, do nothing
+        modalShown = true;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
+
+    // 8) Helper to hide the modal
+    function hideModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+}
+
 
     function createImageZoom() {
         const zoomableImages = document.querySelectorAll('.zoomable-image');
