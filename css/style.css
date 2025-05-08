@@ -1009,7 +1009,7 @@ ul, ol, p {
 .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--oxblood);
+    color: 000;
     letter-spacing: 1px;
 }
 
