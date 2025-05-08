@@ -63,7 +63,7 @@ body {
     font-size: 1.8rem; /* Adjust size to match the new font */
     font-weight: 700;
     letter-spacing: 1px; /* Slightly spaced letters */
-    color: #FFFF00;
+    color: #000;
 }
 
 /* Navigation Menu Styling */
@@ -226,7 +226,7 @@ body {
 }
 
 .hero-cta:hover {
-    background: #76323F;
+    background: #000;
 }
 /* Section Styles */
 .section {
@@ -826,7 +826,7 @@ img.loaded {
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #76323F;
+    color: #000;
     letter-spacing: 1px;
     white-space: nowrap;
 }
