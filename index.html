@@ -1,315 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-    <meta name="description" content="QuickSecure: Advanced Classroom Security"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickSecure: Advanced Classroom Security - Protecting Tomorrow's Future Today">
     <title>QuickSecure – Advanced Classroom Security</title>
-    <!-- Importing a modern font like Raleway -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" />
-    <link rel="stylesheet" href="css/style.css"/>
-    <script src="js/script.js" defer></script>
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/intersectionObserver.js" defer></script>
+    <script src="js/notifications.js" defer></script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="nav-container">
-            <!-- Updated logo link -->
-            <a href="#hero" class="logo">
-                <img src="images/logo.svg" alt="QuickSecure Logo" class="logo-img">
-                <span class="logo-text">QuickSecure</span>
+    <!-- Header -->
+    <header class="main-header" data-sticky="true">
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="QuickSecure Home">
+                <img src="images/logo.svg" alt="QuickSecure Logo" width="40" height="40">
+                <span>QuickSecure</span>
             </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#overview">System Overview</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#data-driven">Virtual Dashboard</a></li>
-                    <li><a href="#needed">Why QuickSecure?</a></li>
-                    <li><a href="#about">Our Story</a></li>
-                    <li><a href="#faq">FAQ & Guidance</a></li>
+            
+            <nav class="primary-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="#digital-dashboard">Digital Dashboard</a></li>
+                    <li><a href="#products">Retrofit Locks</a></li>
+                    <li><a href="#company">Founders</a></li>
+                    <li><a href="#documentation">FAQ</a></li>
                 </ul>
+                
+                <div class="nav-cta">
+                    <a href="./contact.html" class="btn btn-primary">Get Started</a>
+                </div>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <img src="images/hero.jpg" alt="Secure door environment" class="hero-img">
-
-        <div class="hero-content hero-left">
-            <h1 class="hero-title">QuickSecure</h1>
-            <p class="hero-subtitle">Securing <strong>Tomorrow's</strong> Future <strong>Today</strong></p>
-            <a href="#overview" class="hero-cta">Learn More</a>
-        </div>
-    </section>
-
-    <section id="overview" class="section overview">
-        <div class="section-content">
-            <h2>Comprehensive Overview</h2>
-            <p>
-                QuickSecure is a school safety operating system built to secure campuses during active threats through smart locks, AI-powered gunshot detection, and a real-time dashboard. In emergencies, staff can trigger instant lockdowns through mobile panic buttons or centralized controls, securing targeted rooms across the building in seconds. The system is fully retrofit and code compliant, designed to work with existing infrastructure without requiring major renovations.
-            </p>
-            <p>
-                Using live floor plan visualization, schedule integration, and environmental sensor inputs, QuickSecure determines which doors to lock and which should remain accessible to help those in transition find safe shelter. Every decision is reflected instantly on a local dashboard shared with administrators and first responders, providing live insight into door status, threat location, and campus safety conditions. By streamlining fragmented systems into a single, intelligent response platform, QuickSecure reduces chaos, improves clarity, and helps protect lives when every second counts.
-            </p>
-        </div>
-
-    
-        <div class="section-image right">
-            <div class="video-container">
-                <!-- Example animation/video moved up here -->
-                <!-- Replace VIDEO_ID with your YouTube video ID -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AqGHJm3r5XE?si=1r3vjFaz4Zah3qYQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-    
-
-    <section id="products" class="section products">
-        <div class="products-grid">
-            <div class="product-item">
-                <!-- Add .zoomable-image class to enable zoom functionality -->
-                <img src="images/product-electronic.jpg" alt="Electronically Assisted QuickSecure" class="zoomable-image" data-fullsize="images/product-electronic.jpg">
-                <h3>Electronically Assisted QuickSecure</h3>
-                <p>
-                    The Electronically Assisted QuickSecure integrates cutting-edge technology for remote and centralized control:
-                </p>
-                <ul>
-                    <li><strong>DC Motor:</strong> Instantly locks doors at the press of a button.</li>
-                    <li><strong>Electronic Control System:</strong> Connects to the building’s central unit, providing real-time status monitoring and ML-driven analytics.</li>
-                </ul>
-                <p>
-                    This model ensures immediate responses to threats, allowing administrators to secure multiple rooms simultaneously.
-                </p>
-            </div>
-
-            <div class="product-item">
-                <img src="images/product-manual.jpg" alt="Manual QuickSecure" class="zoomable-image" data-fullsize="images/product-manual.jpg">
-                <h3>Manual QuickSecure</h3>
-                <p>
-                    The Manual QuickSecure offers a straightforward, mechanically operated solution:
-                </p>
-                <ul>
-                    <li><strong>Rail System:</strong> Adapts to all standard door frames for optimal positioning.</li>
-                    <li><strong>Slide Lock:</strong> A simple, robust manual locking mechanism.</li>
-                    <li><strong>Status Indicators:</strong> Visual cues for immediate confirmation of lock status.</li>
-                    <li><strong>High-Strength Materials:</strong> Carbon fiber and PLA ensure durability and lightweight handling.</li>
-                </ul>
-                <p>
-                    A cost-effective option for enhancing security without electronic infrastructure.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="dashboard" class="section sound">
-        <div class="section-content">
-            <h2>Unified School Safety Dashboard</h2>
-            <p>
-                QuickSecure is a complete School Safety Operating System that brings all safety information into one simple dashboard. It helps schools comply with Georgia HB 268 (Ricky and Alissa’s Law) and gives both staff and first responders the real-time visibility they need during emergencies.
-            </p>
-            <ul>
-                <li><strong>Live Floor Plan Visualization:</strong> View door status, room occupancy, and active alerts across campus on one clear map. Know what is happening and where, instantly.</li>
-                <li><strong>Mobile Panic Alerts:</strong> Staff can trigger an instant lockdown from their device, alerting responders and updating the system in real time.</li>
-                <li><strong>AI-Based Gunshot Detection:</strong> QuickSecure identifies and locates gunfire using acoustic triangulation and displays the threat location immediately.</li>
-                <li><strong>Adaptive Lockdown Strategy:</strong> The system references schedules, floor plans, and sensor inputs to decide which rooms to secure and which to leave accessible for safety.</li>
-            </ul>
-            <p>
-                By integrating detection, communication, and visibility, QuickSecure allows schools and responders to act faster and smarter—making the entire campus safer for everyone inside.
-            </p>
-        </div>
-        <div class="section-image">
-            <img src="images/sound-localization.jpg" alt="School safety dashboard visualization" class="zoomable-image" data-fullsize="images/sound-localization.jpg">
-        </div>
-    </section>
-
-
-    <section id="needed" class="section needed">
-        <div class="section-content">
-            <h2>Why This Is Needed</h2>
-            <p>
-                In recent years, school shootings have sharply increased, with more than 350 incidents reported in 2023 alone. These events are not only becoming more frequent, but also more deadly and disruptive. This escalation demands more than fragmented tools or reactive strategies—it calls for integrated systems that proactively secure buildings and guide emergency response in real time.
-            </p>
-            <p>
-                The impact of school shootings goes far beyond the moment of crisis. Students exposed to gun violence show measurable declines in academic performance, college enrollment, and long-term earnings. Nearly two out of three students now report living in constant fear of a school shooting, and schools are struggling to restore both physical safety and emotional security.
-            </p>
-            <p>
-                QuickSecure was built to meet this need:
-            </p>
-            <ul>
-                <li>Fully aligned with Georgia House Bill 268 (Ricky and Alassay’s Law), which mandates digital floorplans, mobile panic alerts, and first responder integration by July 1, 2026.</li>
-                <li>Uses AI-powered gunshot detection and real-time sound localization to track threats as they happen.</li>
-                <li>Displays a live floorplan dashboard, giving responders immediate clarity on lockdown status and threat locations.</li>
-                <li>Locks down buildings intelligently, allowing staff to focus on students rather than mechanical procedures.</li>
-            </ul>
-            <p>
-                The faster a threat is contained, the faster the recovery begins. QuickSecure helps ensure that both safety and healing can start the moment a crisis unfolds.
-            </p>
-        </div>
-        <div class="section-image">
-            <img src="images/stat.jpg" alt="Statistics" class="zoomable-image section-image right" data-fullsize="images/stat.jpg">
-        </div>
-    </section>
-
-    <section id="about" class="section about">
-        <div class="section-content">
-            <h2>Our Story</h2>
-            <p>
-                QuickSecure began as an idea born out of necessity. Founded by <strong>Rohan Kumar</strong> and <strong>William Susskind</strong> in 11th grade, the company was created in response to a staggering and heartbreaking reality: the number of active gun threats in schools surpassed the days elapsed in the year. This alarming statistic drove us to take action, to innovate, and to seek a solution that could truly make a difference.
-            </p>
-            <p>
-                When we looked at the existing market, we were disheartened. Many solutions lacked fire safety compliance, making them unsuitable for U.S. public schools. Others placed students in greater danger or simply attempted to mitigate the problem without effectively addressing it. We knew we had to create something better—something that not only complied with safety regulations but actively protected students and educators in life-threatening situations.
-            </p>
-            <p>
-                With determination and guidance from our engineering teachers, we developed the idea for Quick Secure. Encouraged by our educators, we entered our concept into several competitions, and the response was overwhelming. We were honored to win the <strong>K-12 InVenture Prize</strong> at Georgia Institute of Technology, which propelled us to the <strong>National Invention Convention</strong>. There, we were awarded the prestigious <strong>WilmerHale Patent Award</strong>, which allowed us to secure a patent for our product and bring it closer to market.
-            </p>
-            <p>
-                Along the way, we’ve partnered with organizations such as <strong>Ryerson Steel</strong> and <strong>Siemens Electrical</strong>, as well as other companies that believed in our mission. These collaborations have enabled us to refine and advance QuickSecure into the reliable, innovative system it is today.
-            </p>
-            <p>
-                As students ourselves, our mission remains deeply personal: to protect our peers, educators, and communities from the tragic violence that has become all too common. We are committed to making QuickSecure accessible to those who need it most, providing a solution that prioritizes safety, compliance, and peace of mind.
-            </p>
-        </div>
-        <div class="section-image">
-            <img src="images/about-us.jpg" alt="Rohan Kumar and William Susskind, Quick Secure Founders">
-            <p>
-                 
-            </p>
-            <img src="images/about-us2.jpg" alt="Rohan Kumar and William Susskind, Quick Secure Founders">
-        </div>
-    </section>
-    
-
-    <section id="faq" class="faq-section">
-        <div class="faq-header">
-            <h2 class="faq-title">Frequently Asked Questions</h2>
-        </div>
-    
-        <div class="faq-items">
-            <!-- FAQ 1 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How does it work?
-                </button>
-                <div class="faq-answer">
-                    <p>The QuickSecure System operates with simplicity and efficiency, enhancing your security. While the embedded video provides a visual demonstration of the manual system, here's an overview of how both the manual and electronic systems function:</p>
-                    <ul>
-                        <li><strong>Manual System:</strong> In the video, you'll see how the manual Quick Locking Slider is effortlessly pulled down to secure the door. It's a quick, intuitive motion that instantly blocks the shackle, bolstering your safety.</li>
-                        <li><strong>Electronic System:</strong> The electronic system takes security a step further. Through the integrated app, you can remotely activate the motorized lock with a simple tap. Whether you're inside your home or away, the app empowers you to secure your doors at will.</li>
-                    </ul>
-                    <p>While the video showcases the manual system, the electronic version offers the convenience of automated security. Feel free to watch the video for the manual demonstration, and rest assured that the electronic system seamlessly provides a similar level of protection through cutting-edge technology. Your safety is at the heart of our innovation.</p>
+        <!-- Hero Notification System -->
+        <div class="hero-notifications">
+            <div class="notification-box">
+                <div class="notification-icon">
+                    <img src="images/APP Logo.png" alt="QuickSecure App" width="28" height="28">
                 </div>
-            </div>
-    
-            <!-- FAQ 2 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How is this different from locking a door normally?
-                </button>
-                <div class="faq-answer">
-                    <p>The QuickSecure System offers a substantial departure from conventional door locks. Here's how it stands out:</p>
-                    <ul>
-                        <li><strong>Effortless Operation:</strong> In high-stress situations, like emergencies or security threats, the QuickSecure's intuitive design shines. Unlike traditional locks that might require fumbling or careful selection, the manual version involves a single seamless motion – a quick pull down to secure the door, allowing for swift and efficient lockdown.</li>
-                        <li><strong>Enhanced Safety:</strong> The QuickSecure caters to scenarios where motor skills might be impaired due to stress. Teachers and occupants can instantly activate the lock without fine motor control. The electronic version takes it a step further by offering automatic locking with a simple tap on the app or a panic button, ensuring rapid response in critical moments.</li>
-                        <li><strong>Unmatched Convenience:</strong> Traditional locks can be cumbersome and slow, potentially compromising safety. The QuickSecure's streamlined process optimizes response time, enhancing overall security.</li>
-                    </ul>
-                    <p>In summary, the QuickSecure's effortless operation, enhanced safety features, and unmatched convenience differentiate it from regular locks. It's designed to empower users with an effective, rapid, and reliable solution for securing spaces, particularly in high-stress situations where every second counts.</p>
-                </div>
-            </div>
-    
-            <!-- FAQ 3 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How much does it cost?
-                </button>
-                <div class="faq-answer">
-                    <p>The cost of the QuickSecure is tailored to your specific requirements, ensuring you receive optimal value for your investment. Our pricing operates on a sliding scale, determined by factors such as your unique needs and the quantity of orders.</p>
-                    <ul>
-                        <li><strong>Professional Assessment:</strong> A certified technician will conduct an on-site assessment, accurately measuring the number of doors to be equipped with the QuickSecure. This step ensures precise pricing based on your building's layout.</li>
-                        <li><strong>Version Selection:</strong> You can choose the QuickSecure version that best suits your needs – be it the manual system or the advanced electronic suite.</li>
-                        <li><strong>Customized Quote:</strong> Once measurements are taken and your version choice is confirmed, a personalized price quote will be provided. This quote reflects the quantity, version, and any additional considerations.</li>
-                    </ul>
-                    <p>Rest assured, our pricing structure is designed to be fair and transparent. We believe in providing you with a tailored solution that aligns perfectly with your requirements. Your satisfaction is our priority, and we're committed to delivering the best value for your investment.</p>
-                </div>
-            </div>
-    
-            <!-- FAQ 4 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How do I install the QuickSecure?
-                </button>
-                <div class="faq-answer">
-                    <p>Installing the QuickSecure is a seamless process. Here's what you can expect:</p>
-                    <ul>
-                        <li><strong>Professional Assessment:</strong> A certified Quick Secure technician will visit your location to assess and measure all doors where the installation is intended. This ensures a precise fit and optimal security.</li>
-                        <li><strong>Material Approval:</strong> Based on the assessment, the technician will recommend the appropriate materials for your doors. Once approved by you, the installation process begins.</li>
-                        <li><strong>Precise Installation:</strong> Small drill holes will be carefully placed in strategic positions on the door. The QuickSecure will then be securely screwed into these holes, creating a strong and reliable attachment.</li>
-                        <li><strong>Reversible Modification:</strong> If you wish to remove the QuickSecure in the future, the drilled holes can be easily filled and restored, leaving your door intact.</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- FAQ 5 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How do I use the device after installation?
-                </button>
-                <div class="faq-answer">
-                    <p>Using the QuickSecure System post-installation is straightforward. Here's how it works:</p>
-                    <ul>
-                        <li><strong>Professional Installation:</strong> A certified technician will expertly install the QuickSecure System on your doors, ensuring it's properly secured and functioning.</li>
-                        <li><strong>Training Session:</strong> For those who request it, the technician will provide a training session. This session is particularly beneficial for administrators and law enforcement personnel. During the training, you'll learn how to effectively engage and disengage the device, utilize its features, and understand its indicators.</li>
-                        <li><strong>Expert Guidance:</strong> The training ensures that you are well-versed in using the QuickSecure System to its full potential. You'll gain confidence in activating the device swiftly when needed and deactivating it as required.</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- FAQ 6 -->
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How is the electronic system connected?
-                </button>
-                <div class="faq-answer">
-                    <p>The connection of the electronic system is a collaborative and meticulous process. Here's how it comes together:</p>
-                    <ul>
-                        <li><strong>Pre-Installation Check:</strong> Before purchase, all Wi-Fi and system requirements will be thoroughly reviewed. This ensures compatibility and a smooth integration of the electronic system.</li>
-                        <li><strong>Coordinated Installation:</strong> Once the QuickSecure System is ready to be installed, our certified technician will work in tandem with your building's IT staff. Together, they will ensure the electronic system is seamlessly integrated into your existing infrastructure.</li>
-                        <li><strong>Technical Expertise:</strong> Our technician brings expertise in aligning the electronic system with your network. They'll configure settings, establish secure connections, and troubleshoot any potential hiccups.</li>
-                    </ul>
+                <div class="notification-content">
+                    <div class="notification-title">QuickSecure Update</div>
+                    <div class="notification-message"></div>
                 </div>
             </div>
         </div>
-    </section>          
+        
+        <div class="container" style="display: flex; justify-content: flex-end;">
+            <div class="hero-content">
+                <h1 class="fade-up"><i>Securing <strong>Tomorrow's</strong> Future <strong>Today</strong></i></h1>
+                <p class="hero-subtitle fade-up-delay">A school safety operating system that provides real-time monitoring and instant response capabilities.</p>
+                <div class="hero-cta fade-up-delay-2">
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <img src="images/hero.jpg" alt="QuickSecure Hero Image">
+        </div>
+    </section>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-contact" id="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:contactus@quicksecurellc.com">contactus@quicksecurellc.com</a></p>
-                <p>Phone: <a href="tel:4043982778">404-398-2778</a></p>
+    <!-- Features Grid -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title fade-up">Comprehensive Security Features</h2>
+            <p class="section-subtitle fade-up-delay">Protect your campus with our advanced security solutions</p>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-up" data-delay="0">
+                    <div class="feature-icon">
+                        <img src="images/1-2.svg" alt="Smart Lock Icon" width="48" height="48">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Smart Locking</h3>
+                        <p>Instant remote lockdown capabilities with intelligent access control</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card fade-up" data-delay="100">
+                    <div class="feature-icon">
+                        <img src="images/2.svg" alt="AI Detection Icon" width="48" height="48">
+                    </div>
+                    <div class="feature-content">
+                        <h3>AI Detection</h3>
+                        <p>Advanced AI-powered gunshot detection and threat localization</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card fade-up" data-delay="200">
+                    <div class="feature-icon">
+                        <img src="images/3.svg" alt="Dashboard Icon" width="48" height="48">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Live Dashboard</h3>
+                        <p>Real-time monitoring and status updates across your entire campus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Demo -->
+    <section class="dashboard-demo" id="digital-dashboard">
+        <div class="container">
+            <h2 class="section-title fade-up">Digital Dashboard</h2>
+            <p class="section-subtitle fade-up-delay">Experience our intuitive monitoring system</p>
+            
+            <div class="dashboard-preview fade-up-delay-2">
+                <img src="images/laptop-phone.png" alt="Dashboard Preview" class="zoomable">
+                <div class="dashboard-features">
+                    <div class="feature-item">
+                        <h4>Real-time Monitoring</h4>
+                        <p>View live status of all security systems</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Threat Detection</h4>
+                        <p>AI-powered incident identification</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Quick Response</h4>
+                        <p>Instant lockdown capabilities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title fade-up">Retrofit Locks</h2>
+            
+            <div class="product-grid">
+                <div class="product-card fade-up" data-delay="0">
+                    <div class="product-image">
+                        <img src="images/product-electronic.jpg" alt="Electronic QuickSecure" class="zoomable">
+                    </div>
+                    <div class="product-content">
+                        <h3>Electronic QuickSecure</h3>
+                        <ul class="feature-list">
+                            <li>Remote activation through secure mobile app or dashboard</li>
+                            <li>24/7 central monitoring with real-time status updates</li>
+                            <li>Instant response with automated emergency notifications</li>
+                            <li>LED status indicators for clear visual feedback</li>
+                            <li>Seamless integration with existing security systems</li>
+                            <li>Battery backup for continuous operation</li>
+                        </ul>
+                        <div class="product-cta">
+                            <a href="./contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-up" data-delay="100">
+                    <div class="product-image">
+                        <img src="images/product-manual.jpg" alt="Manual QuickSecure" class="zoomable">
+                    </div>
+                    <div class="product-content">
+                        <h3>Manual QuickSecure</h3>
+                        <ul class="feature-list">
+                            <li>No power required - reliable mechanical operation</li>
+                            <li>Quick and simple installation on existing doors</li>
+                            <li>Military-grade materials for maximum durability</li>
+                            <li>Cost-effective solution for any budget</li>
+                            <li>ADA compliant with easy single-motion activation</li>
+                            <li>Maintenance-free design for long-term reliability</li>
+                        </ul>
+                        <div class="product-cta">
+                            <a href="./contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance" id="compliance">
+        <div class="container">
+            <div class="deadline-banner">
+                <strong>Georgia House Bill 268 Compliance Deadline:</strong> Ensure your school's security meets the latest requirements.
             </div>
             
-            <p>© 2025 QuickSecure LLC. All Rights Reserved. Patent Pending.</p>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#overview">System Overview</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#data-driven">Data-Driven Security</a></li>
-                    <li><a href="#needed">Why QuickSecure?</a></li>
-                    <li><a href="#about">Our Story</a></li>
-                    <li><a href="#faq">FAQ & Guidance</a></li>
-                </ul>
-            </nav>
+            <h2 class="section-title fade-up">Georgia HB 268 Compliance</h2>
+            <p class="section-subtitle fade-up-delay">Meeting and exceeding state security requirements for educational institutions</p>
+            
+            <div class="compliance-grid">
+                <div class="compliance-card fade-up" data-delay="0">
+                    <div class="compliance-image">
+                        <img src="images/Digital Campus Map.jpg" alt="Digital Campus Maps" class="feature-preview">
+                    </div>
+                    <div class="compliance-content">
+                        <h3>Digital Campus Maps</h3>
+                        <p>Interactive digital mapping system with real-time monitoring and status updates across your entire campus</p>
+                        <ul class="feature-list">
+                            <li>Real-time room status tracking</li>
+                            <li>Interactive floor plans</li>
+                            <li>Emergency response routing</li>
+                            <li>Live security updates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="compliance-card fade-up" data-delay="100">
+                    <div class="compliance-image">
+                        <img src="images/phone.jpg" alt="Mobile Panic Alerts" class="feature-preview">
+                    </div>
+                    <div class="compliance-content">
+                        <h3>Silent Panic Alert</h3>
+                        <p>Instant alert system with direct communication to law enforcement and first responders</p>
+                        <ul class="feature-list">
+                            <li>One-touch activation</li>
+                            <li>Silent alert capability</li>
+                            <li>Instant administrator notification</li>
+                            <li>Location-based alerts</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="compliance-card fade-up" data-delay="200">
+                    <div class="compliance-image">
+                        <img src="images/911.jpg" alt="911 Integration" class="feature-preview">
+                    </div>
+                    <div class="compliance-content">
+                        <h3>911 Emergency Response</h3>
+                        <p>Direct integration with emergency services for immediate response coordination</p>
+                        <ul class="feature-list">
+                            <li>24/7 emergency dispatch</li>
+                            <li>Real-time communication</li>
+                            <li>Automated incident reporting</li>
+                            <li>First responder coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="company">
+        <div class="container">
+            <h2 class="section-title fade-up">Founders</h2>
+            
+            <div class="about-content">
+                <div class="about-text fade-up">
+                    <p>The story of QuickSecure began in a high school classroom, where founders <strong>Rohan Kumar</strong> and <strong>William Susskind</strong> witnessed firsthand the challenges of existing school security systems. What started as a simple observation turned into a <strong>revolutionary innovation</strong> in school safety.</p>
+                    
+                    <p>During their senior year, they developed the first prototype of QuickSecure, combining <strong>cutting-edge technology</strong> with <strong>practical simplicity</strong>. Their innovation quickly gained recognition, winning the prestigious <strong>K-12 InVenture Prize</strong> and securing the <strong>WilmerHale Patent Award</strong>.</p>
+                    
+                    <p>Today, QuickSecure has evolved from a school project into a <strong>comprehensive security solution</strong> that's transforming campus safety across the nation. Our mission remains unchanged: to create <strong>safer learning environments</strong> where students and teachers can focus on education, knowing they're protected by state-of-the-art security technology.</p>
+                    
+                    <p>The journey from concept to reality has been driven by our commitment to <strong>innovation</strong>, <strong>reliability</strong>, and <strong>accessibility</strong>. We continue to work closely with schools, law enforcement, and safety experts to enhance and evolve our solutions, ensuring they meet and exceed the ever-changing demands of modern school security.</p>
+                </div>
+                
+                <div class="about-images fade-up-delay">
+                    <img src="images/about-us.jpg" alt="QuickSecure Founders" class="founder-image">
+                    <img src="images/about-us2.jpg" alt="QuickSecure Team" class="team-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="documentation">
+        <div class="container">
+            <h2 class="section-title fade-up">FAQ</h2>
+            <p class="section-subtitle fade-up-delay">Find answers to common questions about QuickSecure</p>
+            
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <!-- First half of FAQ items -->
+                </div>
+                <div class="faq-column">
+                    <!-- Second half of FAQ items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2 class="fade-up">Ready to Secure Your Campus?</h2>
+            <p class="fade-up-delay">Contact us today for a personalized demonstration</p>
+            <div class="cta-buttons fade-up-delay-2">
+                <a href="mailto:contactus@quicksecurellc.com" class="btn btn-primary">Contact Sales</a>
+                <a href="tel:4043982778" class="btn btn-outline">Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#company">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:contactus@quicksecurellc.com">contactus@quicksecurellc.com</a></p>
+                    <p>Phone: <a href="tel:4043982778">404-398-2778</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuickSecure Inc. All Rights Reserved. Patent Pending.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Image Modal for Zooming -->
-    <div id="image-modal" class="image-modal hidden">
-        <div class="image-modal-content">
-            <span class="image-modal-close">&times;</span>
-            <img id="image-modal-img" src="" alt="Expanded view">
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <img src="" alt="" id="modalImage">
         </div>
     </div>
 
+    <!-- Newsletter Modal -->
+    <div class="newsletter-modal" id="newsletterModal">
+        <div class="newsletter-content">
+            <button class="modal-close" aria-label="Close Newsletter">&times;</button>
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest security updates and compliance information.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <div class="newsletter-submit">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Newsletter Script -->
+    <script src="js/newsletter.js" defer></script>
 </body>
 </html>

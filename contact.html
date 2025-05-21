@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact QuickSecure - Get in touch for advanced classroom security solutions">
+    <title>Contact Us – QuickSecure</title>
+    
+    <!-- Debug Script - Remove in production -->
+    <script>
+        console.log('Page starting to load');
+        window.addEventListener('load', () => {
+            console.log('Page fully loaded');
+            
+            // Debug element visibility
+            const contactSection = document.querySelector('.contact-section');
+            const contactForm = document.getElementById('contactForm');
+            const container = document.querySelector('.container');
+            
+            console.log('Contact section:', {
+                exists: !!contactSection,
+                visible: !!contactSection && window.getComputedStyle(contactSection).display !== 'none',
+                height: contactSection?.offsetHeight,
+                background: contactSection && window.getComputedStyle(contactSection).backgroundColor
+            });
+            
+            console.log('Contact form:', {
+                exists: !!contactForm,
+                visible: !!contactForm && window.getComputedStyle(contactForm).display !== 'none',
+                height: contactForm?.offsetHeight
+            });
+            
+            console.log('Container:', {
+                exists: !!container,
+                visible: !!container && window.getComputedStyle(container).display !== 'none',
+                height: container?.offsetHeight,
+                padding: container && window.getComputedStyle(container).padding
+            });
+            
+            // Check animation classes
+            const animatedElements = document.querySelectorAll('.fade-up, .fade-up-delay, .fade-up-delay-2');
+            console.log('Animated elements:', {
+                count: animatedElements.length,
+                elements: Array.from(animatedElements).map(el => ({
+                    className: el.className,
+                    visible: el.classList.contains('visible'),
+                    opacity: window.getComputedStyle(el).opacity
+                }))
+            });
+        });
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/animations.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header" data-sticky="true">
+        <div class="header-inner">
+            <a href="./index.html" class="logo" aria-label="QuickSecure Home">
+                <img src="images/logo.svg" alt="QuickSecure Logo" width="40" height="40">
+                <span>QuickSecure</span>
+            </a>
+            
+            <nav class="primary-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="./index.html#digital-dashboard">Digital Dashboard</a></li>
+                    <li><a href="./index.html#products">Retrofit Locks</a></li>
+                    <li><a href="./index.html#company">Founders</a></li>
+                    <li><a href="./index.html#documentation">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title fade-up">Get in Touch</h1>
+            <p class="section-subtitle fade-up-delay">Let's discuss how we can secure your campus</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form fade-up">
+                    <form id="contactForm" action="https://formsubmit.co/contactus@quicksecurellc.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New QuickSecure Contact Form Submission">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://quicksecurellc.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="true">
+                        
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h4>Personal Information</h4>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX-XXXX">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="position">Position/Role *</label>
+                                <select id="position" name="position" required>
+                                    <option value="">Select your role</option>
+                                    <option value="administrator">School Administrator</option>
+                                    <option value="principal">Principal</option>
+                                    <option value="superintendent">Superintendent</option>
+                                    <option value="security-director">Security Director</option>
+                                    <option value="facilities-manager">Facilities Manager</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="board-member">School Board Member</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Organization Information -->
+                        <div class="form-section">
+                            <h4>Organization Information</h4>
+                            <div class="form-group">
+                                <label for="organization">Organization Name *</label>
+                                <input type="text" id="organization" name="organization" required placeholder="Enter your school or organization name">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="organization-type">Organization Type *</label>
+                                    <select id="organization-type" name="organization_type" required>
+                                        <option value="">Select type</option>
+                                        <option value="elementary">Elementary School</option>
+                                        <option value="middle">Middle School</option>
+                                        <option value="high">High School</option>
+                                        <option value="k12">K-12 School</option>
+                                        <option value="college">College/University</option>
+                                        <option value="district">School District</option>
+                                        <option value="government">Government Facility</option>
+                                        <option value="private">Private Institution</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="student-count">Student Population</label>
+                                    <input type="number" id="student-count" name="student_count" placeholder="Number of students">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="num-buildings">Number of Buildings *</label>
+                                    <input type="number" id="num-buildings" name="num_buildings" required min="1" placeholder="Total buildings to secure">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="num-doors">Doors to Secure</label>
+                                    <input type="number" id="num-doors" name="num_doors" placeholder="Approximate number of doors">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Interest -->
+                        <div class="form-section">
+                            <h4>Product Interest</h4>
+                            <div class="form-group">
+                                <label for="interest">Primary Interest *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Select your interest</option>
+                                    <option value="electronic">Electronic QuickSecure System</option>
+                                    <option value="manual">Manual QuickSecure System</option>
+                                    <option value="both">Both Solutions</option>
+                                    <option value="consultation">Security Consultation</option>
+                                    <option value="information">General Information</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timeline">Implementation Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="immediate">Immediate (1-2 months)</option>
+                                    <option value="quarter">This Quarter</option>
+                                    <option value="semester">This Semester</option>
+                                    <option value="year">This Academic Year</option>
+                                    <option value="planning">Future Planning</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-100k">$50,000 - $100,000</option>
+                                    <option value="100k-plus">$100,000+</option>
+                                    <option value="undefined">To Be Determined</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h4>Additional Information</h4>
+                            <div class="form-group">
+                                <label for="message">Questions or Comments *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please share any specific requirements, questions, or concerns..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="demo" value="yes">
+                                    I would like to schedule a live demo
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="newsletter" value="yes">
+                                    Subscribe to our newsletter for security updates and compliance information
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <p class="form-note">* Required fields</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info fade-up-delay">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-method">
+                        <i class="icon-email"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:contactus@quicksecurellc.com">contactus@quicksecurellc.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="icon-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:4043982778">(404) 398-2778</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="icon-location"></i>
+                        <div>
+                            <h4>Office</h4>
+                            <p>Atlanta, Georgia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-hours">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM EST</p>
+                        <p>24/7 Emergency Support Available</p>
+                    </div>
+
+                    <div class="emergency-note">
+                        <h4>Emergency?</h4>
+                        <p>For immediate assistance with your security system, please call our 24/7 support line:</p>
+                        <a href="tel:4043982778" class="emergency-phone">(404) 398-2778</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="./index.html#features">Features</a></li>
+                        <li><a href="./index.html#products">Products</a></li>
+                        <li><a href="./index.html#demo">Demo</a></li>
+                        <li><a href="./index.html#documentation">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="./index.html#company">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:contactus@quicksecurellc.com">contactus@quicksecurellc.com</a></p>
+                    <p>Phone: <a href="tel:4043982778">404-398-2778</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuickSecure Inc. All Rights Reserved. Patent Pending.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
