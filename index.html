@@ -377,7 +377,6 @@
     <!-- Newsletter Script -->
     <script src="js/newsletter.js" defer></script>
 
-<!-- AI Chat Bot Widget Configuration -->
 <script>
   window.ChatWidgetConfig = {
     webhook: "https://quicksecure.app.n8n.cloud/webhook/f406671e-c954-4691-b39a-66c90aa2f103/chat",
@@ -396,9 +395,14 @@
       fontColor: "#333333"
     }
   };
+
+  // 👇 Load chat widget AFTER the config is fully available
+  window.addEventListener('DOMContentLoaded', function () {
+    var script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/gh/WayneSimpson/n8n-chatbot-template/chat-widget.js";
+    document.body.appendChild(script);
+  });
 </script>
-<script src="https://cdn.jsdelivr.net/gh/WayneSimpson/n8n-chatbot-template/chat-widget.js"></script>
-<!-- End AI Chat Bot Widget -->
 
 </body>
 </html>
